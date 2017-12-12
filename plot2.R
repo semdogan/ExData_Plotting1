@@ -9,6 +9,7 @@ pow = read.table(
   quote = "" )
 
 #subset data
+pow$Date <- as.Date(pow$Date, "%d/%m/%Y")
 pow_sub <- pow[pow$Date == "2007-02-01" | pow$Date == "2007-02-02", ]
 
 #convert the Date and Time variables 
