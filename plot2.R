@@ -2,11 +2,8 @@
 
 pow = read.table(
   file="household_power_consumption.txt", 
-  header=TRUE, 
-  fill = TRUE, 
-  as.is=TRUE,
-  sep=";", comment.char = "",
-  quote = "" )
+  header=TRUE, fill = TRUE, as.is=TRUE,na.strings = "?",
+  sep=";", comment.char = "", quote = "" )
 
 #subset data
 pow$Date <- as.Date(pow$Date, "%d/%m/%Y")
